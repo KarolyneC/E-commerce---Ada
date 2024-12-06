@@ -1,0 +1,22 @@
+@if (boardgame) {
+<mat-card class="boardgame-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>{{ boardgame.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ boardgame.imageLink }}" alt="Photo of {{ boardgame.title }} Board Game">
+    <mat-card-content>
+        <b>{{ boardgame.price }}</b>
+
+        <p> {{ boardgame.description }}
+        </p>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-icon-button (click)="warnParentAboutItemAddition(boardgame)" >
+            <mat-icon>
+                add_shopping_cart
+            </mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>
+}

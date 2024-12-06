@@ -1,0 +1,14 @@
+<app-header [drawer]="drawer"></app-header>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer mode="side">
+        <app-cart [cartArr]="cartItensArray"></app-cart>
+    </mat-drawer>
+
+    <div>
+        <app-boardgame-catalog (warnApp)="addItemToCart($event)"></app-boardgame-catalog>
+    </div>
+
+</mat-drawer-container>
+
+<router-outlet />

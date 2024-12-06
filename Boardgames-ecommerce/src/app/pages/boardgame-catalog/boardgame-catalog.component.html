@@ -1,0 +1,7 @@
+<div class="container">
+    @for (boardgamesObj of boardgamesArray; track boardgamesObj.id) {
+        <app-boardgame-card [boardgame]="boardgamesObj" (warnBoardGameCatalog)="warnParentAboutItemAddition($event)"></app-boardgame-card>
+
+    }
+
+</div>
